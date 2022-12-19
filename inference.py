@@ -1,6 +1,6 @@
 # To run 
 # python inference.py <audiofile> <number of time to run inference>
-# python inference.py 8555-292519-0009.wav 2
+# python inference.py 8555-292519-0009.wav 3
 import sys
 import subprocess
 import timeit
