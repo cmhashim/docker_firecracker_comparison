@@ -18,13 +18,12 @@ total_time=[]
 print('Running inference -',run_times,'time')
 
 dirname = './test_audios/'
-for files in os.listdir(dirname):
-    if files.endswith('.wav'):
-        temp = timeit.timeit('subprocess.run(shlex.split("deepspeech --model ./models/deepspeech-0.9.3-models.pbmm --scorer ./models/deepspeech-0.9.3-models.scorer --audio ./test_audios/"+audiofile), check=True, text=True)',globals=globals(),number=int(run_times))
-        print('Time taken for inference of',files,temp)
-        total_time+=temp
-
-    else:
-        continue
-
-print('Time taken for inference of 12 audio files -',total_time)
+for i in range(int(run_times)):
+    for files in os.listdir(dirname):
+        if files.endswith('.wav'):
+            temp = timeit.timeit('subprocess.run(shlex.split("deepspeech --model ./models/deepspeech-0.9.3-models.pbmm --scorer ./models/deepspeech-0.9.3-models.scorer --audio ./test_audios/"+audiofile), check=True, text=True)',globals=globals(),number=int(run_times))
+            print('Time taken for inference of',files,temp)
+            total_time+=temp
+        else:
+            continue
+print('Time taken for inference of 12 audio files -',str(run_times),'times -',total_time)
