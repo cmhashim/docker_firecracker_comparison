@@ -19,4 +19,4 @@ elif n==3:
 
 print('Running inference -',run_times,'time')
 result = timeit.timeit('subprocess.run(shlex.split("deepspeech --model ./models/deepspeech-0.9.3-models.pbmm --scorer ./models/deepspeech-0.9.3-models.scorer --audio ./test_audios/"+audiofile), check=True, text=True)',globals=globals(),number=int(run_times))
-print('Time of execution -',result)
+print('Time taken for inference of',audiofile,result)
