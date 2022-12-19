@@ -1,2 +1,2 @@
-# Performanc analysis of Docker and Firecracker running ML inferences
+# Performance analysis of Docker and Firecracker running ML inferences
 
