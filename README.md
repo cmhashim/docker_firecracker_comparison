@@ -164,6 +164,9 @@ To exit from the container, type `exit`
  5              | **Multiple instance inference** | python inference\_all.py | 438.088s            | **376.980s**           
  5              | (12 audios, 3 times)        | model load time          | avg **0.012s**      | avg 0.015s               
 
+* To conclude, the inference of the ML models usually make use of large pre-trained models stored in cloud. To be able to perform inference on edge devices completely without using cloud resources, these pre-trained model has to be stored in local edge devices for low latency inferences. This scenario is imitated and inference was done locally without network connectivity. Due to the resource contraints of the host machine, containers with ML frameworks like torch were not created. For Deepspeech inference, both Docker and Firecracker VM performs reasonably well, even though Firecracker VM is better than the other. However, deepspeech inferences in Firecracker VM are executed in less time than in the Docker container. 
+
+
 ## Whats Next ?
 
 * Run different ML frameworks to compare performance effectively.
