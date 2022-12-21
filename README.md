@@ -164,7 +164,13 @@ To exit from the container, type `exit`
  5              | **Multiple instance inference** | python inference\_all.py | 438.088s            | **376.980s**           
  5              | (12 audios, 3 times)        | model load time          | avg **0.012s**      | avg 0.015s               
 
+## Whats Next ?
 
+* Run different ML frameworks to compare performance effectively.
+* Deploy ML model with web application in Docker and firecracker VM in AWS EC2 instance.
+* Run multiple applications or overload to benchmark the bottleneck of Docker and Firecracker VM.
+* Use Prometheus to monitor the resource utilization and visualization using Grafana can be done.
+* Deloy a ML model on Nvidia Jetson and compare the performances.ep
 
 
 
