@@ -1,0 +1,729 @@
+hash@Hashlap:~$ sudo docker run -m 2GB --cpus 2.0 -it --entrypoint bash --rm ds:1.2
+[sudo] password for hash: 
+root@0f19d0b100d8:/# python
+Python 3.9.16 (main, Dec  8 2022, 02:40:11) 
+[GCC 10.2.1 20210110] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import timeit
+>>> timeit.timeit('import deepspeech')
+0.4119792459987366
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> 
+root@0f19d0b100d8:/# time deepspeech --model ./models/deepspeech-0.9.3-models.pbmm --scorer ./models/deepspeech-0.9.3-models.scorer --audio ./test_audios/8555-292519-0009.wav 
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:47:32.940819: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0124s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000276s.
+Running inference.
+home he sails that seemed to wander in dream filled meadows say is the shore where i stand the only field of struggle or are ye hit and battered out there by waves and wind gusts as he had over a clashing sea of watery echoes
+Inference took 8.452s for 17.965s audio file.
+
+real	0m9.284s
+user	0m11.526s
+sys	0m0.381s
+root@0f19d0b100d8:/# python inference.py 1221-135766-0010.wav 10
+Running inference - 10 time
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:49:28.237559: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0122s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000224s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 32.663s for 15.050s audio file.
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:50:01.550269: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0213s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.0004s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 7.294s for 15.050s audio file.
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:50:09.238742: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0126s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000212s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 7.158s for 15.050s audio file.
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:50:16.641855: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0122s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000199s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 7.301s for 15.050s audio file.
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:50:24.244143: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.013s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000193s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 7.272s for 15.050s audio file.
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:50:31.843292: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0118s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000189s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 7.233s for 15.050s audio file.
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:50:39.342513: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0115s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000204s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 7.308s for 15.050s audio file.
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:50:46.942452: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0121s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000181s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 7.273s for 15.050s audio file.
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:50:54.447152: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0124s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000183s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 7.291s for 15.050s audio file.
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:51:02.043891: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0129s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000186s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 7.162s for 15.050s audio file.
+## Time taken for inference of 1221-135766-0010.wav 10 times - 101.25798396400023
+root@0f19d0b100d8:/# python inference_all.py 
+Running inference - 1 time
+## Running inference - 1 of 1 time
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:52:24.686653: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0122s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.0002s.
+Running inference.
+home he sails that seemed to wander in dream filled meadows say is the shore where i stand the only field of struggle or are ye hit and battered out there by waves and wind gusts as he had over a clashing sea of watery echoes
+Inference took 8.512s for 17.965s audio file.
+## Time taken for inference of 8555-292519-0009.wav 8.856097560999842
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:52:33.532289: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0124s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000199s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 7.209s for 15.050s audio file.
+## Time taken for inference of 1221-135766-0010.wav 7.540413027001705
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:52:41.042624: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0126s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000232s.
+Running inference.
+but there is always a stronger sense of life when the sun is brilliant after rain and now he is pouring down his beams and making sparkles among the wet straw and lighting up every patch of vivid green moss on the red tiles of the cowshed and turning even the muddy water that is hurrying along the channel to the drain into a mirror for the yellow billed ducks who were seizing the opportunity of getting a drink with as much body in it as possible
+Inference took 33.270s for 31.650s audio file.
+## Time taken for inference of 2094-142345-0008.wav 33.70667060699998
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:53:15.613489: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0211s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000396s.
+Running inference.
+all the morning they trudged up the mountain path and at noon on and odo sat on a fallen tree trunk and ate the last of the bread which the old munchkin had placed in his pocket
+Inference took 10.681s for 10.490s audio file.
+## Time taken for inference of 1284-1180-0008.wav 11.868141549999564
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:53:26.644635: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0113s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000222s.
+Running inference.
+as the chase drives away mary stands bewildered and perplexed on the doorstep her mind in a tumult of excitement in which hatred of the doctor distrust and suspicion of her mother disappointment vexation and ill humour surge and swell among those delicate organizations on which the structure and development of the soul so closely depend doing perhaps and irreparable injury
+Inference took 22.508s for 32.880s audio file.
+## Time taken for inference of 7021-79730-0003.wav 22.863964482001393
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:53:49.543943: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0117s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000189s.
+Running inference.
+a quarter of an hour afterwards he returned to the theatre but it will be readily believed that it was only a powerful effort of reason over his great excitement that enabled him to go back or perhaps for love is thus strangely constituted he found that impossible even to remain much longer separated from the presence of one who had broken his heart
+Inference took 28.750s for 22.840s audio file.
+## Time taken for inference of 7127-75947-0009.wav 29.150955145998523
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:54:18.636877: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.011s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.0002s.
+Running inference.
+he passes abruptly from persons to ideas and numbers and from ideas and numbers the persons from the heavens to man from astronomy to physiology he confuses rather does not distinguish subject and object first and final causes and is dreaming of to metrical figures lost in a flood of sense
+Inference took 19.986s for 27.180s audio file.
+## Time taken for inference of 2961-960-0000.wav 20.575789239001097
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:54:39.165837: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0131s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000273s.
+Running inference.
+the lily of the valley breathing in the humble grass answered the lovely maiden said i am a water weed and i am very small and loved to dwell in lowly fails so weak the gilded butterfly scarce purchase on my head yet i am visited from heaven and he that smiles on all walks in the valley and each morn over me spread his hand saying rejoice thou humble grass thou newborn lily flower
+Inference took 29.886s for 32.770s audio file.
+## Time taken for inference of 908-157963-0007.wav 30.18746334699972
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:55:10.056530: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0122s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000181s.
+Running inference.
+valor indeed was very generally diffused over the one party as well as the other during this period discipline also was attained by the forces of the parliament but the perfection of the military art in concerting the general plans of action and the operations of the field seemed still on both sides to have been in a great measure wanting
+Inference took 32.651s for 27.525s audio file.
+## Time taken for inference of 8224-274381-0016.wav 33.659182098999736
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:55:43.038091: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0118s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000183s.
+Running inference.
+yesterday you were trembling for a health that is dear to you to day you fear for your own to morrow it will be anxiety about money the day after to morrow the diatribe of a slanderer the day after that the misfortune of some friend then the prevailing weather then something that has been broken or lost then a pleasure with which your conscience and your vertical reproach you again the course of public affairs
+Inference took 28.698s for 34.955s audio file.
+## Time taken for inference of 4507-16021-0047.wav 29.89237954499913
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:56:12.943915: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0123s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000176s.
+Running inference.
+when a private in the ape cavalry he had been on the point of quitting the army at twenty eight years of age but unexpectedly he had been appointed orderly to captain servadac
+Inference took 10.378s for 10.730s audio file.
+## Time taken for inference of 5105-28233-0008.wav 10.70875816499938
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:56:23.646955: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.012s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000192s.
+Running inference.
+among other persons of distinction who united themselves to him was lord napier of merchiston son of the famous inventor of the logarithms the person to whom the title of a great man is more justly due than to any other whom his country ever produced
+Inference took 17.490s for 22.450s audio file.
+## Time taken for inference of 8224-274381-0001.wav 17.808422436999535
+#### Time taken for inference of 12 audio files - 1 times - 256.8182372049996
+root@0f19d0b100d8:/# python inference_all.py 3
+Running inference - 3 time
+## Running inference - 1 of 3 time
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:57:38.448228: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0119s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000179s.
+Running inference.
+home he sails that seemed to wander in dream filled meadows say is the shore where i stand the only field of struggle or are ye hit and battered out there by waves and wind gusts as he had over a clashing sea of watery echoes
+Inference took 8.731s for 17.965s audio file.
+## Time taken for inference of 8555-292519-0009.wav 9.028382447000695
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:57:47.452922: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0117s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000198s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 7.735s for 15.050s audio file.
+## Time taken for inference of 1221-135766-0010.wav 7.9763303010004165
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:57:55.449848: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0118s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000178s.
+Running inference.
+but there is always a stronger sense of life when the sun is brilliant after rain and now he is pouring down his beams and making sparkles among the wet straw and lighting up every patch of vivid green moss on the red tiles of the cowshed and turning even the muddy water that is hurrying along the channel to the drain into a mirror for the yellow billed ducks who were seizing the opportunity of getting a drink with as much body in it as possible
+Inference took 23.849s for 31.650s audio file.
+## Time taken for inference of 2094-142345-0008.wav 24.159303484000702
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:58:19.638313: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0122s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.00018s.
+Running inference.
+all the morning they trudged up the mountain path and at noon on and odo sat on a fallen tree trunk and ate the last of the bread which the old munchkin had placed in his pocket
+Inference took 5.426s for 10.490s audio file.
+## Time taken for inference of 1284-1180-0008.wav 5.718995360999543
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:58:25.341002: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0123s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000194s.
+Running inference.
+as the chase drives away mary stands bewildered and perplexed on the doorstep her mind in a tumult of excitement in which hatred of the doctor distrust and suspicion of her mother disappointment vexation and ill humour surge and swell among those delicate organizations on which the structure and development of the soul so closely depend doing perhaps and irreparable injury
+Inference took 16.229s for 32.880s audio file.
+## Time taken for inference of 7021-79730-0003.wav 16.505300323000483
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:58:41.849863: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0117s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000179s.
+Running inference.
+a quarter of an hour afterwards he returned to the theatre but it will be readily believed that it was only a powerful effort of reason over his great excitement that enabled him to go back or perhaps for love is thus strangely constituted he found that impossible even to remain much longer separated from the presence of one who had broken his heart
+Inference took 11.424s for 22.840s audio file.
+## Time taken for inference of 7127-75947-0009.wav 11.700913941998806
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:58:53.543775: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0114s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000202s.
+Running inference.
+he passes abruptly from persons to ideas and numbers and from ideas and numbers the persons from the heavens to man from astronomy to physiology he confuses rather does not distinguish subject and object first and final causes and is dreaming of to metrical figures lost in a flood of sense
+Inference took 13.013s for 27.180s audio file.
+## Time taken for inference of 2961-960-0000.wav 13.284308898000745
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:59:06.888156: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0119s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000182s.
+Running inference.
+the lily of the valley breathing in the humble grass answered the lovely maiden said i am a water weed and i am very small and loved to dwell in lowly fails so weak the gilded butterfly scarce purchase on my head yet i am visited from heaven and he that smiles on all walks in the valley and each morn over me spread his hand saying rejoice thou humble grass thou newborn lily flower
+Inference took 15.718s for 32.770s audio file.
+## Time taken for inference of 908-157963-0007.wav 16.050848081000368
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:59:22.849179: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0125s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000173s.
+Running inference.
+valor indeed was very generally diffused over the one party as well as the other during this period discipline also was attained by the forces of the parliament but the perfection of the military art in concerting the general plans of action and the operations of the field seemed still on both sides to have been in a great measure wanting
+Inference took 13.402s for 27.525s audio file.
+## Time taken for inference of 8224-274381-0016.wav 13.63941129199884
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:59:36.543821: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.012s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000195s.
+Running inference.
+yesterday you were trembling for a health that is dear to you to day you fear for your own to morrow it will be anxiety about money the day after to morrow the diatribe of a slanderer the day after that the misfortune of some friend then the prevailing weather then something that has been broken or lost then a pleasure with which your conscience and your vertical reproach you again the course of public affairs
+Inference took 17.183s for 34.955s audio file.
+## Time taken for inference of 4507-16021-0047.wav 17.473521284000526
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:59:53.953159: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0121s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000176s.
+Running inference.
+when a private in the ape cavalry he had been on the point of quitting the army at twenty eight years of age but unexpectedly he had been appointed orderly to captain servadac
+Inference took 5.425s for 10.730s audio file.
+## Time taken for inference of 5105-28233-0008.wav 5.657088121000925
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 06:59:59.648484: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0113s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000185s.
+Running inference.
+among other persons of distinction who united themselves to him was lord napier of merchiston son of the famous inventor of the logarithms the person to whom the title of a great man is more justly due than to any other whom his country ever produced
+Inference took 11.096s for 22.450s audio file.
+## Time taken for inference of 8224-274381-0001.wav 11.340657958999145
+## Running inference - 2 of 3 time
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:00:11.037884: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0121s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000181s.
+Running inference.
+home he sails that seemed to wander in dream filled meadows say is the shore where i stand the only field of struggle or are ye hit and battered out there by waves and wind gusts as he had over a clashing sea of watery echoes
+Inference took 8.645s for 17.965s audio file.
+## Time taken for inference of 8555-292519-0009.wav 8.935629318000792
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:00:19.943096: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0119s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000176s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 7.264s for 15.050s audio file.
+## Time taken for inference of 1221-135766-0010.wav 7.552311257000838
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:00:27.541249: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0125s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000203s.
+Running inference.
+but there is always a stronger sense of life when the sun is brilliant after rain and now he is pouring down his beams and making sparkles among the wet straw and lighting up every patch of vivid green moss on the red tiles of the cowshed and turning even the muddy water that is hurrying along the channel to the drain into a mirror for the yellow billed ducks who were seizing the opportunity of getting a drink with as much body in it as possible
+Inference took 15.790s for 31.650s audio file.
+## Time taken for inference of 2094-142345-0008.wav 16.10162583300007
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:00:43.551315: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0119s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000219s.
+Running inference.
+all the morning they trudged up the mountain path and at noon on and odo sat on a fallen tree trunk and ate the last of the bread which the old munchkin had placed in his pocket
+Inference took 5.083s for 10.490s audio file.
+## Time taken for inference of 1284-1180-0008.wav 5.3194395509999595
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:00:48.941799: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0119s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000174s.
+Running inference.
+as the chase drives away mary stands bewildered and perplexed on the doorstep her mind in a tumult of excitement in which hatred of the doctor distrust and suspicion of her mother disappointment vexation and ill humour surge and swell among those delicate organizations on which the structure and development of the soul so closely depend doing perhaps and irreparable injury
+Inference took 15.660s for 32.880s audio file.
+## Time taken for inference of 7021-79730-0003.wav 15.965963478998674
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:01:04.843057: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0115s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000195s.
+Running inference.
+a quarter of an hour afterwards he returned to the theatre but it will be readily believed that it was only a powerful effort of reason over his great excitement that enabled him to go back or perhaps for love is thus strangely constituted he found that impossible even to remain much longer separated from the presence of one who had broken his heart
+Inference took 11.583s for 22.840s audio file.
+## Time taken for inference of 7127-75947-0009.wav 11.825648579000699
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:01:16.724663: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0116s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000192s.
+Running inference.
+he passes abruptly from persons to ideas and numbers and from ideas and numbers the persons from the heavens to man from astronomy to physiology he confuses rather does not distinguish subject and object first and final causes and is dreaming of to metrical figures lost in a flood of sense
+Inference took 13.150s for 27.180s audio file.
+## Time taken for inference of 2961-960-0000.wav 13.449551268000505
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:01:30.150474: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0123s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000201s.
+Running inference.
+the lily of the valley breathing in the humble grass answered the lovely maiden said i am a water weed and i am very small and loved to dwell in lowly fails so weak the gilded butterfly scarce purchase on my head yet i am visited from heaven and he that smiles on all walks in the valley and each morn over me spread his hand saying rejoice thou humble grass thou newborn lily flower
+Inference took 15.803s for 32.770s audio file.
+## Time taken for inference of 908-157963-0007.wav 16.079307214999062
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:01:46.239799: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0115s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000244s.
+Running inference.
+valor indeed was very generally diffused over the one party as well as the other during this period discipline also was attained by the forces of the parliament but the perfection of the military art in concerting the general plans of action and the operations of the field seemed still on both sides to have been in a great measure wanting
+Inference took 13.451s for 27.525s audio file.
+## Time taken for inference of 8224-274381-0016.wav 13.728033658999266
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:01:59.950996: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0125s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000187s.
+Running inference.
+yesterday you were trembling for a health that is dear to you to day you fear for your own to morrow it will be anxiety about money the day after to morrow the diatribe of a slanderer the day after that the misfortune of some friend then the prevailing weather then something that has been broken or lost then a pleasure with which your conscience and your vertical reproach you again the course of public affairs
+Inference took 17.265s for 34.955s audio file.
+## Time taken for inference of 4507-16021-0047.wav 17.532643602000462
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:02:17.535117: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0116s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000183s.
+Running inference.
+when a private in the ape cavalry he had been on the point of quitting the army at twenty eight years of age but unexpectedly he had been appointed orderly to captain servadac
+Inference took 5.355s for 10.730s audio file.
+## Time taken for inference of 5105-28233-0008.wav 5.672226847000275
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:02:23.158817: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0122s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000188s.
+Running inference.
+among other persons of distinction who united themselves to him was lord napier of merchiston son of the famous inventor of the logarithms the person to whom the title of a great man is more justly due than to any other whom his country ever produced
+Inference took 10.602s for 22.450s audio file.
+## Time taken for inference of 8224-274381-0001.wav 10.875091105999672
+## Running inference - 3 of 3 time
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:02:34.053305: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0119s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000184s.
+Running inference.
+home he sails that seemed to wander in dream filled meadows say is the shore where i stand the only field of struggle or are ye hit and battered out there by waves and wind gusts as he had over a clashing sea of watery echoes
+Inference took 8.558s for 17.965s audio file.
+## Time taken for inference of 8555-292519-0009.wav 8.839123127001585
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:02:42.849033: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0116s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.00019s.
+Running inference.
+it was a look so intelligent yet inexplicable perverse sometimes so malicious but generally accompanied by a wild flow of spirits that hester could not help questioning at such moments whether pearl was a human child
+Inference took 7.219s for 15.050s audio file.
+## Time taken for inference of 1221-135766-0010.wav 7.46291707400087
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:02:50.342642: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0116s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000269s.
+Running inference.
+but there is always a stronger sense of life when the sun is brilliant after rain and now he is pouring down his beams and making sparkles among the wet straw and lighting up every patch of vivid green moss on the red tiles of the cowshed and turning even the muddy water that is hurrying along the channel to the drain into a mirror for the yellow billed ducks who were seizing the opportunity of getting a drink with as much body in it as possible
+Inference took 15.649s for 31.650s audio file.
+## Time taken for inference of 2094-142345-0008.wav 15.92919602800066
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:03:06.244926: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0123s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000187s.
+Running inference.
+all the morning they trudged up the mountain path and at noon on and odo sat on a fallen tree trunk and ate the last of the bread which the old munchkin had placed in his pocket
+Inference took 5.196s for 10.490s audio file.
+## Time taken for inference of 1284-1180-0008.wav 5.444190672000332
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:03:11.737356: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.012s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000204s.
+Running inference.
+as the chase drives away mary stands bewildered and perplexed on the doorstep her mind in a tumult of excitement in which hatred of the doctor distrust and suspicion of her mother disappointment vexation and ill humour surge and swell among those delicate organizations on which the structure and development of the soul so closely depend doing perhaps and irreparable injury
+Inference took 16.064s for 32.880s audio file.
+## Time taken for inference of 7021-79730-0003.wav 16.334604884999862
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:03:28.050890: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0125s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000206s.
+Running inference.
+a quarter of an hour afterwards he returned to the theatre but it will be readily believed that it was only a powerful effort of reason over his great excitement that enabled him to go back or perhaps for love is thus strangely constituted he found that impossible even to remain much longer separated from the presence of one who had broken his heart
+Inference took 11.323s for 22.840s audio file.
+## Time taken for inference of 7127-75947-0009.wav 11.578336422000575
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:03:39.643941: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0119s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000189s.
+Running inference.
+he passes abruptly from persons to ideas and numbers and from ideas and numbers the persons from the heavens to man from astronomy to physiology he confuses rather does not distinguish subject and object first and final causes and is dreaming of to metrical figures lost in a flood of sense
+Inference took 13.256s for 27.180s audio file.
+## Time taken for inference of 2961-960-0000.wav 13.539583589999893
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:03:53.244417: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0119s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000203s.
+Running inference.
+the lily of the valley breathing in the humble grass answered the lovely maiden said i am a water weed and i am very small and loved to dwell in lowly fails so weak the gilded butterfly scarce purchase on my head yet i am visited from heaven and he that smiles on all walks in the valley and each morn over me spread his hand saying rejoice thou humble grass thou newborn lily flower
+Inference took 15.525s for 32.770s audio file.
+## Time taken for inference of 908-157963-0007.wav 15.876253545000509
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:04:09.048851: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0118s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000195s.
+Running inference.
+valor indeed was very generally diffused over the one party as well as the other during this period discipline also was attained by the forces of the parliament but the perfection of the military art in concerting the general plans of action and the operations of the field seemed still on both sides to have been in a great measure wanting
+Inference took 13.469s for 27.525s audio file.
+## Time taken for inference of 8224-274381-0016.wav 13.727309894000427
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:04:22.747437: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0121s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000194s.
+Running inference.
+yesterday you were trembling for a health that is dear to you to day you fear for your own to morrow it will be anxiety about money the day after to morrow the diatribe of a slanderer the day after that the misfortune of some friend then the prevailing weather then something that has been broken or lost then a pleasure with which your conscience and your vertical reproach you again the course of public affairs
+Inference took 17.385s for 34.955s audio file.
+## Time taken for inference of 4507-16021-0047.wav 17.62907827500021
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:04:40.446547: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0124s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.000183s.
+Running inference.
+when a private in the ape cavalry he had been on the point of quitting the army at twenty eight years of age but unexpectedly he had been appointed orderly to captain servadac
+Inference took 4.972s for 10.730s audio file.
+## Time taken for inference of 5105-28233-0008.wav 5.261058248999689
+Loading model from file ./models/deepspeech-0.9.3-models.pbmm
+TensorFlow: v2.3.0-6-g23ad988
+DeepSpeech: v0.9.3-0-gf2e9c85
+2022-12-21 07:04:45.641239: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Loaded model in 0.0118s.
+Loading scorer from files ./models/deepspeech-0.9.3-models.scorer
+Loaded scorer in 0.00018s.
+Running inference.
+among other persons of distinction who united themselves to him was lord napier of merchiston son of the famous inventor of the logarithms the person to whom the title of a great man is more justly due than to any other whom his country ever produced
+Inference took 10.644s for 22.450s audio file.
+## Time taken for inference of 8224-274381-0001.wav 10.894308073999127
+#### Time taken for inference of 12 audio files - 3 times - 438.0884930420052
+root@0f19d0b100d8:/# 
+

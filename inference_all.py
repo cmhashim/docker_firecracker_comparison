@@ -22,7 +22,7 @@ for i in range(int(run_times)):
     print('## Running inference -',i+1,'of',run_times,'time')
     for files in os.listdir(dirname):
         if files.endswith('.wav'):
-            temp = timeit.timeit('subprocess.run(shlex.split("deepspeech --model ./models/deepspeech-0.9.3-models.pbmm --scorer ./models/deepspeech-0.9.3-models.scorer --audio ./test_audios/"+files), check=True, text=True)',globals=globals(),number=1)
+            temp = timeit.timeit('subprocess.run("deepspeech --model ./models/deepspeech-0.9.3-models.pbmm --scorer ./models/deepspeech-0.9.3-models.scorer --audio ./test_audios/"+files, check=True, text=True, shell=True)',globals=globals(),number=1)
             print('## Time taken for inference of',files,temp)
             total_time+=temp
         else:
